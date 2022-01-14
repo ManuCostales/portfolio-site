@@ -1,0 +1,185 @@
+
+.header {
+    background: linear-gradient(
+    rgba(0,0,0,0.6),
+    rgba(0,0,0,0.6)),
+    url(../imagenes/main_header.png);
+    background-size: cover;
+    background-position: center;
+    margin-top: 5vh;
+    overflow: hidden;
+        .home__h1 {
+            @include s-w (1.5rem, 600);
+            @include flexbox (flex, column nowrap, center, center);
+            color: $color-w;
+            text-align: center;
+            padding: 0 12%;
+            margin:0;
+            margin-top: 2vh;
+            margin-bottom: 5vh;
+            height: 30%;
+            line-height: 70px;
+            .home__h1--span1 {
+                display: none;
+                font-size: 2.5rem;
+            }
+            .home__h1--span2 {
+                display: none;
+            }
+            .home__h1--span3 {
+                font-size: 3.5rem;
+                line-height:40px;
+            }
+        }
+        .home__h2 {
+            height: 40%;
+            @include flexbox (flex, column nowrap, space-evenly, center);
+            @include s-w (2rem, 300);
+            line-height: 0px;
+                .home__h2--blue {
+                    color: $color;
+                }
+                .home__h2--white {
+                    color: $color-w;
+                }
+        }
+}
+
+
+// IPAD LG BREAKDOWN
+
+@media only screen and (min-width: 768px) {
+    .header {
+        @include bg (url(../imagenes/main_header.png), no-repeat, cover, center, auto);
+        .home__h1 {
+            align-items: flex-start;
+            justify-content: flex-start;
+            margin-top: 10vh;
+            padding: 0 6%;
+            line-height: 40px;
+            span {
+                margin: 3vh 0;
+            }
+            .home__h1--span1 {
+                font-size: 6rem;
+            }
+            .home__h1--span2 {
+                font-size: 4rem;
+            }
+            .home__h1--span3 {
+                line-height:70px;
+                font-size: 7rem;
+                text-align: start;
+            }
+        }
+        .home__h2 {
+            font-size: 3.8rem;
+            flex-flow: row nowrap;
+            align-items: flex-start;
+            justify-content:center;
+        }
+    }
+}
+
+// IPAD PRO LG+ BREAKDOWN
+
+@media only screen and (min-width: 1024px) {
+    .header {
+        @include bg (url(../imagenes/main_header.png), no-repeat, cover, center, auto);
+        .home__h1 {
+            align-items: flex-start;
+            justify-content: flex-start;
+            margin-top: 10vh;
+            padding: 0 6%;
+            line-height: 40px;
+            margin-bottom: 8vh;
+            span {
+                margin: 3vh 0;
+            }
+            .home__h1--span1 {
+                font-size: 6rem;
+            }
+            .home__h1--span2 {
+                font-size: 4rem;
+            }
+            .home__h1--span3 {
+                line-height:120px;
+                font-size: 10rem;
+                text-align: start;
+            }
+        }
+        .home__h2 {
+            font-size: 5rem;
+            flex-flow: row nowrap;
+            align-items: flex-start;
+            justify-content:center;
+        }
+    }
+}
+
+// NOTEBOOK XL BREAKDOWN
+
+@media only screen and (min-width: 1100px) {
+    .header {
+        .home__h1 {
+            align-items: center;
+            justify-content: center;
+            height: 50vh;
+            margin-bottom: 5vh;
+            .home__h1--span1 {
+                font-size: 8rem;
+                display: none;
+                align-self: flex-start;
+            }
+            .home__h1--span2 {
+                font-size: 4rem;
+                display: none;
+                align-self: flex-start;
+            }
+            .home__h1--span3 {
+                width: 70%;
+                line-height:160px;
+                font-size: 9rem;
+                text-align: end;
+                align-self: flex-end;
+            }
+        }
+        .home__h2 {
+            font-size: 4rem;
+            align-items: flex-start;
+            justify-content:flex-end;
+            margin: 0 4%;
+            span {
+                margin: 0 1vw;
+            }
+        }
+    }
+}
+
+// DESKTOP XXL BREAKDOWN
+
+@media only screen and (min-width: 1360px) {
+    .header {
+        background: linear-gradient(
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)),
+            url(../Imagenes/header_desktop.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        .home__h1 {
+            
+            .home__h1--span3 {
+                font-size: 10rem;
+            }
+        }
+        .home__h2 {
+            font-size: 5rem;
+            font-weight: 300;
+            .home__h2--blue {
+                font-weight: 700;
+            }
+        }
+    }
+}
+

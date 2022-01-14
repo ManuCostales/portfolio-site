@@ -1,0 +1,118 @@
+
+
+// MAIN - CARDS BUTTON
+
+.card__button {
+    margin: $center;
+    padding: 1rem 2rem;
+    background-color: $color;
+    color: $color-w;
+    font-weight:700;
+    border-radius: 8px;
+}
+
+
+// MAIN - MORE, BUTTONS
+
+.sobreMi__buttons {
+    @include flexbox (flex, row nowrap, space-evenly, center);
+    margin-bottom: 10vh;
+    text-align: center;
+    .sobreMi__btn {
+        background-color: $color-w;
+        color: $color;
+        border-radius: 7px;
+        border:none;
+        width: 40%;
+        padding: 1.2rem 0.5rem;
+        .sobreMi__btn--a {
+            text-align: center;
+            text-decoration: none;
+            color: $color;
+            @include s-w (0.9rem, 700);
+        }
+    }
+}
+
+// IPAD LG BREAKDOWN
+
+@media only screen and (min-width: 768px) {
+
+// MAIN - CARDS BUTTON
+
+    .card__button {
+        margin: 1vh auto;
+        padding: 1rem 2rem;
+        @include s-w (1.5rem, 700);
+    }
+
+// MAIN - MORE, BUTTONS
+
+    .sobreMi__buttons {
+        .sobreMi__btn {
+            width: 30%;
+            padding: 1.2rem 0.5rem;
+            .sobreMi__btn--a {
+                @include s-w (1.5rem, 700);
+            }
+        }
+    }
+
+
+}
+
+
+// IPAD PRO LG BREAKDOWN
+
+@media only screen and (min-width: 1024px) {
+
+    // MAIN - CARDS BUTTON
+    
+        .card__button {
+            margin: 1vh auto;
+            padding: 1rem 2rem;
+            @include s-w (2.5rem, 700);
+        }
+    
+    // MAIN - MORE, BUTTONS
+    
+        .sobreMi__buttons {
+            .sobreMi__btn {
+                width: 30%;
+                padding: 1.2rem 0.5rem;
+                .sobreMi__btn--a {
+                    @include s-w (2.2rem, 700);
+                }
+            }
+        }
+    
+    
+    }
+
+
+// NOTEBOOK XL BREAKDOWN
+
+@media only screen and (min-width: 1200px) {
+
+    // MAIN - CARDS BUTTON
+    
+        .card__button {
+            margin: 1vh auto;
+            padding: 1rem 2rem;
+            @include s-w (1.2rem, 700);
+        }
+    
+    // MAIN - MORE, BUTTONS
+    
+        .sobreMi__buttons {
+            .sobreMi__btn {
+                width: 30%;
+                padding: 1.2rem 0.5rem;
+                .sobreMi__btn--a {
+                    @include s-w (2.2rem, 700);
+                }
+            }
+        }
+    
+    
+    }

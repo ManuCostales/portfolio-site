@@ -1,0 +1,734 @@
+
+// GENERAL
+
+#main-home {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: minmax(10vh, max-content) minmax(10vh, max-content) minmax(10vh, max-content) minmax(10vh, max-content);
+    grid-template-areas: "intro intro intro"
+    "projects projects projects"
+    "tools tools tools"
+    "more more more";
+}
+
+// SECTION 1 - INTRO
+
+.home__intro {
+    grid-area: intro;
+    @include flexbox (flex, column nowrap, center, center);
+    .home__intro--img {
+        width: 250px;
+        margin: 5vh 0;
+    }
+    .home__intro--p {
+        text-align: center;
+        font-size: 0.8rem;
+        @include m-p(1rem 1.5rem, 0 0.5rem);
+        border-left: 1px solid $color;
+        border-right: 1px solid $color;
+        color: $color-font-contact-2;
+    }
+    .home__intro--logo {
+        width: 100px;
+        margin: 5vh 0;
+    }
+}
+
+// SECTION 2 - PROJECTOS 
+
+.home__projectos {
+    grid-area: projects;
+    .home__projectos--title {
+        width: 70%;
+        margin: $center;
+        @include s-w (2.5rem, 300);
+        text-align: center;
+        color: $color-title;
+        border-left: 1px solid $color-light;
+        border-right: 1px solid $color-light;
+    }
+
+    .card {
+        box-shadow: 2px 7px 13px 5px rgba(0,0,0,0.12);
+        .card__img {
+            object-fit: cover;
+            height: 30vh;
+        }
+        .card__body {
+            @include flexbox (flex, column nowrap, center, center);
+            .card__title {
+                font-family: 'Cabin', sans-serif;
+                @include s-w (1.8rem, 700);
+            }
+            .card__p {
+                @include s-w (1rem, 400);
+            }
+        } 
+    }
+}
+
+// SECTION 3 - HERRAMIENTAS 
+
+.home__tools {
+    grid-area: tools;
+    margin-top: 15vh;
+    border-bottom: 1px solid $color-light;
+    .home__tools--intro {
+        background: linear-gradient($color-dark, $color-dark, $color-w);
+        padding: 5vh 0;
+        margin-bottom: 4vh;
+        .home__tools--title {
+            width: 80%;
+            @include m-p ($center, 0 0vw);
+            margin-bottom: 5vh;
+            @include s-w (2.2rem, 300);
+            text-align: center;
+            color: $color-w;
+            border-left: 1px solid $color-w;
+            border-right: 1px solid $color-w;
+        }
+        .home__tools--p {
+            text-align: center;
+            color: $color-w;
+            @include s-w (1rem, 400);
+            padding: 0 5vw;
+            margin-bottom: 2vh;
+        }
+    }
+}
+
+.tools__ul--left {
+    @include flexbox (flex, row nowrap, space-evenly, center);
+    @include m-p (0, 0);
+    .tools__li--title {
+        h4 {
+            @include s-w (1rem, 400);
+            margin: 0;
+            color: $color;
+            font-family: 'Chakra Petch', sans-serif;
+        }
+    }
+    .tools__li--logo {
+        img {
+            width: 30px;
+        }
+    }
+    .tools__li--div {
+        div {
+            border-top: solid 1px $color;
+            width: 20vw;
+        }
+    }
+}
+
+.tools__ul--right {
+    @include flexbox (flex, row nowrap, space-evenly, center);
+    @include m-p (0, 0);
+    .tools__li--title {
+        h4 {
+            @include s-w (1rem, 400);
+            margin: 0;
+            color: $color;
+            font-family: 'Chakra Petch', sans-serif;
+        }
+    }
+    .tools__li--logo {
+        img {
+            width: 30px;
+        }
+    }
+    .tools__li--div {
+        div {
+            border-top: solid 1px $color;
+            width: 20vw;
+        }
+    }
+}
+
+.tools__logos {
+    @include flexbox (flex, row nowrap, space-evenly, center);
+    @include m-p (4vh 0, 6vh 0);
+    // background-color: #CEE7FF;
+    // background: linear-gradient($color-w, #CEE7FF,$color-w);
+    .tools__logos--li {
+        img {
+            width: 50px;
+        }
+    }
+    .tools__logos--li-two {
+        img {
+            width: 100px;
+        }
+    }
+    .tools__logos--li-three {
+        img {
+            width: 75px;
+        }
+    }
+}
+
+// SECTION - MAS INFO
+
+.home__sobreMi {
+    grid-area: more;
+    background: linear-gradient($color-dark, $color-dark);
+    margin: 10vh auto;
+    .home__sobreMi--title {
+        width: 80%;
+        @include m-p (10vh auto, 0 0vw);
+        @include s-w (2.2rem, 300);
+        text-align: center;
+        color: $color-w;
+        border-left: 1px solid $color-w;
+        border-right: 1px solid $color-w;
+    }
+    .home__sobreMi--p {
+        width: 80%;
+        text-align: center;
+        @include s-w (1rem, 400);
+        @include m-p ($center, 0);
+        color: $color-w;
+        margin-bottom: 10vh;
+    }
+}
+
+// ---------------------------------------------------MD BREAKDOWN-------------------
+
+// IPAD MD BREAKDOWN 
+
+@media only screen and (min-width: 768px) {
+
+    // SECTION 1 - INTRO 
+
+    .home__intro {
+        .home__intro--img {
+            width: 350px;
+        }
+        .home__intro--p {
+            font-size: 1.2rem;
+            @include m-p(2rem 10vw, 0 1rem);
+            border-left: 2px solid $color;
+            border-right: 2px solid $color;
+        }
+    }
+
+    // SECTION 2 - PROJECTOS
+
+    .home__projectos {
+        margin-top: 12vh;
+        .home__projectos--title {
+            width: 45%;
+            margin: 3vh auto;
+            @include s-w (4rem, 300);
+        }
+    
+        .card {
+            .card__img {
+                object-fit: cover;
+                height: 30vh;
+            }
+            .card__body {
+                @include flexbox (flex, column nowrap, center, center);
+                .card__title {
+                    font-family: 'Cabin', sans-serif;
+                    @include s-w (3rem, 700);
+                    margin-top: 1vh;
+                }
+                .card__p {
+                    @include s-w (1.5rem, 400);
+                }
+            } 
+        }
+    }
+
+    // SECTION 3 - HERRAMIENTAS 
+
+    .home__tools {
+        margin-top: 20vh;
+        .home__tools--intro {
+            margin-bottom: 10vh;
+            .home__tools--title {
+                width: 60%;
+                @include m-p (5vh auto, 0 0vw);
+                margin-bottom: 10vh;
+                @include s-w (4rem, 300);
+            }
+            .home__tools--p {
+                @include s-w (1.2rem, 400);
+                margin-bottom: 3vh;
+            }
+        }
+    }
+
+    .tools__ul--left {
+        padding: 0 5vw;
+        .tools__li--title {
+            h4 {
+                @include s-w (1.8rem, 400);
+            }
+        }
+        .tools__li--logo {
+            img {
+                width: 50px;
+            }
+        }
+        .tools__li--div {
+            div {
+                width: 30vw;
+            }
+        }
+    }
+    
+    .tools__ul--right {
+        padding: 0 5vw;
+        .tools__li--title {
+            h4 {
+                @include s-w (1.8rem, 400);
+            }
+        }
+        .tools__li--logo {
+            img {
+                width: 50px;
+            }
+        }
+        .tools__li--div {
+            div {
+                width: 30vw;
+            }
+        }
+    }
+    
+    .tools__logos {
+        @include m-p (4vh 0, 6vh 0);
+        .tools__logos--li {
+            img {
+                width: 80px;
+            }
+        }
+        .tools__logos--li-two {
+            img {
+                width: 120px;
+            }
+        }
+        .tools__logos--li-three {
+            img {
+                width: 95px;
+            }
+        }
+    }
+
+    // SECTION - MAS INFO
+
+    .home__sobreMi {
+        .home__sobreMi--title {
+            width: 60%;
+            @include s-w (4rem, 300);
+        }
+        .home__sobreMi--p {
+            width: 80%;
+            @include s-w (1.3rem, 400);
+        }
+    }
+}
+
+// ---------------------------------------------------LG BREAKDOWN-------------------
+
+// IPAD PRO LG BREAKDOWN
+
+@media only screen and (min-width: 1024px) {
+    // SECTION 1 - INTRO 
+
+    .home__intro {
+        .home__intro--img {
+            width: 500px;
+        }
+        .home__intro--p {
+            font-size: 1.6rem;
+            @include m-p(3rem 10vw, 0 1rem);
+        }
+        .home__intro--logo {
+            width: 200px;
+        }
+    }
+
+    // SECTION 2 - PROJECTOS
+
+    .home__projectos {
+        .home__projectos--title {
+            width: 50%;
+            @include s-w (6rem, 300);
+        }
+    
+        .card {
+            .card__img {
+                object-fit: cover;
+                height: 30vh;
+            }
+            .card__body {
+                @include flexbox (flex, column nowrap, center, center);
+                .card__title {
+                    font-family: 'Cabin', sans-serif;
+                    @include s-w (5.5rem, 700);
+                    margin: 0;
+                    margin-top: 3vh;
+                }
+                .card__p {
+                    @include s-w (3rem, 400);
+                    margin: 3vh 0;
+                }
+            } 
+        }
+    }
+
+    // SECTION 3 - HERRAMIENTAS 
+
+    .home__tools {
+        .home__tools--intro {
+            .home__tools--title {
+                width: 70%;
+                @include s-w (6rem, 300);
+            }
+            .home__tools--p {
+                @include s-w (1.7rem, 400);
+                margin-bottom: 6vh;
+            }
+        }
+    }
+
+    .tools__ul--left {
+        padding: 0 5vw;
+        .tools__li--title {
+            h4 {
+                @include s-w (2rem, 400);
+            }
+        }
+        .tools__li--logo {
+            img {
+                width: 70px;
+            }
+        }
+    }
+    
+    .tools__ul--right {
+        padding: 0 5vw;
+        .tools__li--title {
+            h4 {
+                @include s-w (2rem, 400);
+            }
+        }
+        .tools__li--logo {
+            img {
+                width: 70px;
+            }
+        }
+    }
+    
+    .tools__logos {
+        @include m-p (4vh 0, 6vh 0);
+        .tools__logos--li {
+            img {
+                width: 80px;
+            }
+        }
+        .tools__logos--li-two {
+            img {
+                width: 140px;
+            }
+        }
+        .tools__logos--li-three {
+            img {
+                width: 95px;
+            }
+        }
+    }
+
+    .tools__two--ul {
+        justify-content: center;
+        li {
+            margin: 0 5vw;
+        }
+    }
+
+    // SECTION - MAS INFO
+
+    .home__sobreMi {
+        .home__sobreMi--title {
+            width: 70%;
+            @include s-w (6rem, 300);
+        }
+        .home__sobreMi--p {
+            width: 80%;
+            @include s-w (1.7rem, 400);
+        }
+    }
+    
+}
+
+// ---------------------------------------------------XL BREAKDOWN-------------------
+
+// NOTEBOOK XL BREAKDOWN
+
+@media only screen and (min-width: 1200px) {
+    // SECTION 1 - INTRO 
+
+    .home__intro {
+        .home__intro--img {
+            width: 350px;
+        }
+        .home__intro--p {
+            font-size: 1.2rem;
+            @include m-p(2rem 10vw, 0 1rem);
+            border-left: 2px solid $color;
+            border-right: 2px solid $color;
+        }
+    }
+
+    // SECTION 2 - PROJECTOS
+
+    .home__projectos {
+        .home__projectos--title {
+            width: 30%;
+            @include s-w (4rem, 300);
+        }
+    
+        .card {
+            .card__body {
+                .card__title {
+                    @include s-w (2.2rem, 700);
+                }
+                .card__p {
+                    @include s-w (1.2rem, 400);
+                }
+            } 
+        }
+    }
+
+    // SECTION 3 - HERRAMIENTAS 
+
+    .home__tools {
+        .home__tools--intro {
+            .home__tools--title {
+                width: 40%;
+                @include s-w (4rem, 300);
+            }
+            .home__tools--p {
+                @include s-w (1.5rem, 200);
+            }
+        }
+    }
+
+    .tools__ul--left {
+        padding: 0 5vw;
+        .tools__li--title {
+            h4 {
+                @include s-w (1.5rem, 400);
+            }
+        }
+        .tools__li--logo {
+            img {
+                width: 50px;
+            }
+        }
+        .tools__li--div {
+            div {
+                width: 60vw;
+            }
+        }
+    }
+    
+    .tools__ul--right {
+        padding: 0 5vw;
+        .tools__li--title {
+            h4 {
+                @include s-w (1.5rem, 400);
+            }
+        }
+        .tools__li--logo {
+            img {
+                width: 50px;
+            }
+        }
+        .tools__li--div {
+            div {
+                width: 60vw;
+            }
+        }
+    }
+    
+    .tools__logos {
+        @include m-p (6vh 0, 6vh 12vw);
+        justify-content: flex-start;
+        .tools__logos--li {
+            margin: 0 3vw;
+            img {
+                width: 80px;
+            }
+        }
+        .tools__logos--li-two {
+            img {
+                width: 140px;
+            }
+        }
+        .tools__logos--li-three {
+            margin: 0 5vw;
+            img {
+                width: 95px;
+            }
+        }
+    }
+
+    .tools__two--ul {
+        justify-content: flex-end;
+        padding-right: 10vw;
+        li {
+            margin: 0 5vw;
+        }
+    }
+
+    .tools__logos--diseño {
+        justify-content: flex-end;
+    }
+
+    // SECTION - MAS INFO
+
+    .home__sobreMi {
+        .home__sobreMi--title {
+            width: 40%;
+            @include s-w (4rem, 300);
+        }
+        .home__sobreMi--p {
+            width: 80%;
+            @include s-w (1.2rem, 400);
+        }
+    }
+
+}
+
+// ---------------------------------------------------XXL BREAKDOWN-------------------
+
+// DESKTOP XXL BREAKDOWN
+
+@media only screen and (min-width: 1400px) {
+    // SECTION 1 - INTRO 
+
+    .home__intro {
+        .home__intro--img {
+            width: 400px;
+        }
+        .home__intro--p {
+            font-size: 1.2rem;
+            @include m-p(3rem 30vw, 0 1rem);
+        }
+        .home__intro--logo {
+            width: 150px;
+            margin: 10vh 0;
+        }
+    }
+
+    // SECTION 2 - PROJECTOS
+
+    .home__projectos {
+        .home__projectos--title {
+            width: 25%;
+            @include s-w (4rem, 300);
+            padding: 0;
+            margin-bottom: 5vh;
+        }
+    }
+
+    // SECTION 3 - HERRAMIENTAS 
+
+    .home__tools {
+        .home__tools--intro {
+            .home__tools--title {
+                width: 30%;
+            }
+        }
+    }
+
+    .tools__ul--left {
+        padding: 0 5vw;
+        .tools__li--title {
+            h4 {
+                @include s-w (1.5rem, 400);
+            }
+        }
+        .tools__li--logo {
+            img {
+                width: 50px;
+            }
+        }
+        .tools__li--div {
+            div {
+                width: 60vw;
+            }
+        }
+    }
+    
+    .tools__ul--right {
+        padding: 0 5vw;
+        .tools__li--title {
+            h4 {
+                @include s-w (1.5rem, 400);
+            }
+        }
+        .tools__li--logo {
+            img {
+                width: 50px;
+            }
+        }
+        .tools__li--div {
+            div {
+                width: 60vw;
+            }
+        }
+    }
+    
+    .tools__logos {
+        @include m-p (6vh 0, 6vh 12vw);
+        justify-content: flex-start;
+        .tools__logos--li {
+            margin: 0 3vw;
+            img {
+                width: 80px;
+            }
+        }
+        .tools__logos--li-two {
+            img {
+                width: 140px;
+            }
+        }
+        .tools__logos--li-three {
+            margin: 0 5vw;
+            img {
+                width: 95px;
+            }
+        }
+    }
+
+    .tools__two--ul {
+        justify-content: flex-end;
+        padding-right: 10vw;
+        li {
+            margin: 0 5vw;
+        }
+    }
+
+    .tools__logos--diseño {
+        justify-content: flex-end;
+    }
+
+    // SECTION - MAS INFO
+
+    .home__sobreMi {
+        .home__sobreMi--title {
+            width: 30%;
+            @include s-w (4rem, 300);
+        }
+        .home__sobreMi--p {
+            width: 80%;
+            @include s-w (1.2rem, 400);
+        }
+    }
+
+}

@@ -1,0 +1,89 @@
+.nav {
+    z-index: 999;
+    position: fixed;
+    font-weight: 300;
+    background-color: $color;
+    .nav__logo {
+        .nav__logo--img {
+            width: 50px;
+        }
+    }
+}
+
+
+// IPAD LG BREAKDOWN
+
+@media only screen and (min-width: 768px) {
+    .nav {
+        .nav__logo {
+            .nav__logo--img {
+                width: 90px;
+            }
+        }
+    }
+}
+
+// IPAD PRO LG+ BREAKDOWN
+
+@media only screen and (min-width: 1024px) {
+    .nav {
+        @include s-w (1.5rem, 300);
+        .nav__logo {
+            .nav__logo--img {
+                width: 100px;
+            }
+        }
+        .dropdown__a {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+// NOTEBOOK XL BREAKDOWN
+
+@media only screen and (min-width: 1200px) {
+    .nav {
+        @include s-w (1.2rem, 300);
+        .nav__logo {
+            .nav__logo--img {
+                width: 80px;
+            }
+        }
+        .nav__li {
+            transition: all 0.1s ease;
+            &:hover {
+                border-left: 1px solid $color-w;
+                border-right: 1px solid $color-w;
+            }
+            .nav__a {
+                &:hover {
+                    font-weight: 400;
+                }
+            }
+        }
+        .dropdown__a {
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+    }
+}
+
+// DESKTOP XXL BREAKDOWN
+
+@media only screen and (min-width: 1360px) {
+    .nav {
+        @include s-w (1.2rem, 300);
+        .nav__logo {
+            .nav__logo--img {
+                width: 80px;
+            }
+        }
+        .nav__li {
+            margin: 0 3vw;
+        }
+        .dropdown__a {
+            font-size: 1.2rem;
+        }
+    }
+}
+

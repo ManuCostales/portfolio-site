@@ -1,12 +1,305 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+        <!--My CSS-->
+
+        <link href="./css/main.css" rel="stylesheet">
+
+        <title>ManuCostales - Home</title>
+    </head>
+    <body>
+
+        <!--NAVBAR-->
+
+        <nav class="nav navbar navbar-expand-sm navbar-dark  container-fluid p-0">
+            <div class="container-fluid p-0">
+
+              <a class="nav__logo navbar-brand ms-1" href="#"><img class="nav__logo--img" src="./imagenes/logo_navbar.svg" alt="Logo Manuelcostales"></a>
+
+              <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="nav__collapse collapse navbar-collapse  justify-content-end" id="navbarSupportedContent">
+                <ul class="nav__ul navbar-nav mb-lg-0">
+                    <li class="nav__li nav-item dropdown mx-3 mx-xxl-4">
+                      <a class="nav__a nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Home
+                      </a>
+                        <ul class="dropdown-menu me-2" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown__a dropdown-item text-primary" href="#">Projectos</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown__a dropdown-item text-primary" href="#">Herramientas</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown__a dropdown-item text-primary" href="#">Mas Info</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__li nav-item mx-3 mx-xxl-4">
+                        <a class="nav__a nav-link text-white" aria-current="page" href="#">Acerca de Mi</a>
+                    </li>
+                    <li class="nav__li nav-item mx-3 mx-xxl-4">
+                        <a class="nav__a nav-link text-white" href="#">Contacto</a>
+                    </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+        <!-- HEADER -->
+
+        <header class="header" id="header-home">
+            <h1 class="home__h1">
+                <span class="home__h1--span1">Hola!</span>
+                <span class="home__h1--span2">Soy</span>
+                <span class="home__h1--span3">Manuel Costales</span></h1>
+            <h2 class="home__h2">
+                <span class="home__h2--blue">Diseño</span>
+                <span class="home__h2--white">y</span>
+                <span class="home__h2--blue">Desarrollo</span>
+                <span class="home__h2--white">Web</span>
+            </h2>
+        </header>
+
+        <!--MAIN-->
+
+        <main class="main" id="main-home">
+
+            <!--Main-Intro-->
+
+            <section class="home__intro">
+
+                <img class="home__intro--img" src="./imagenes/manu.png" alt="Foto de Manuel Costales">
+
+                <p class="home__intro--p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem necessitatibus quo culpa, fugit cum voluptatem facere inventore repellendus dolore eligendi quasi aperiam e</p>
+
+                <p class="home__intro--p">voluptate perferendis, molestiae voluptatem, soluta dolores amet officia consequatur quod velit non minima omnis eaque eos.d consequuntur corporis, deleniti recusandae enim sapiente eveniet culpa accusamus totam odio exercitationem eos placeat dolorum. Porro?</p>
+
+                <img class="home__intro--logo" src="./imagenes/logo_main.svg" alt="Logo Manuel Costales">
+
+            </section>
+
+            <!--Main-Projectos-->
+
+            <section class="home__projectos">
+
+                <h3 class="home__projectos--title">Projectos</h3>
+
+                <div class="container-fluid row m-0 px-4 px-md-5">
+
+                    <div class="col-12 col-xxl-4  my-3 mt-5 my-md-5 p-0 p-xl-5 my-xl-0">
+                        <div class="card">
+                            <img src="./imagenes/chiro.jpeg" alt="Pagina de Producción Musical" class="card__img card-img-top">
+                            <div class="card__body card-body">
+                                <h5 class="card__title card-title text-center">Chiro</h5>
+                                <p class="card__p card-text text-center">Producción Musical</p>
+                                <!-- Button trigger modal -->
+                                <button type="button" class="card__button btn mb-3 mb-lg-5 mb-xl-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop-6">Ver Más</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-xxl-4  my-3 my-md-5 p-0 p-xl-5 my-xl-0">
+                        <div class="card">
+                            <img src="./imagenes/horus.jpeg" alt="Pagina de Cerveza Artesanal" class="card__img card-img-top">
+                            <div class="card__body card-body">
+                                <h5 class="card__title card-title text-center">Black Parrot</h5>
+                                <p class="card__p card-text text-center">Cerveza Artesanal</p>
+                                <!-- Button trigger modal -->
+                                <button type="button" class="card__button btn mb-3 mb-lg-5 mb-xl-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop-6">Ver Más</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-xxl-4  my-3 my-md-5 p-0 p-xl-5 my-xl-0">
+                        <div class="card">
+                            <img src="./imagenes/form.jpeg" alt="Landing Page" class="card__img card-img-top">
+                            <div class="card__body card-body">
+                                <h5 class="card__title card-title text-center">Aqua Dance</h5>
+                                <p class="card__p card-text text-center">Landing Page</p>
+                                <!-- Button trigger modal -->
+                                <button type="button" class="card__button btn mb-3 mb-lg-5 mb-xl-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop-6">Ver Más</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!--Main-Herramientas-->
+
+            <section class="home__tools">
+
+                <div class="home__tools--intro">
+
+                    <h3 class="home__tools--title">Herramientas</h3>
+
+                    <p class="home__tools--p">Estas son las herramientas principales que utilizo en mi Workflow.</p>
+
+                </div>
+
+                <div class="tools">
+
+                    <!--Diseño UI/Ilustración-->
+
+                    <ul class="tools__ul--left tools__diseño--ul">
+                        <li class="tools__li--title tools_diseño--li"><h4>Diseño UI / Ilustración</h4></li>
+                        <li class="tools__li--logo tools_diseño--li"><img src="./imagenes/logo_diseño.svg" alt="Logo Diseño"></li>
+                        <li class="tools__li--div tools_diseño--li"><div></div></li>
+                    </ul>
+
+                    <ul class="tools__logos tools__logos--diseño">
+                        <li class="tools__logos--li-three"><img src="./imagenes/illustrator_logo.svg" alt="Logo Illustrator"></li>
+                        <li class="tools__logos--li-three"><img src="./imagenes/photoshop_logo.svg" alt="Logo Photoshop"></li>
+                        <li class="tools__logos--li-three"><img src="./imagenes/figma_logo.svg" alt="Logo Figma"></li>
+                    </ul>
+                    
+                    <!--Coding/Development-->
+
+                    <ul class="tools__ul--right tools__coding--ul">
+                        <li class="tools__li--div tools_diseño--li"><div></div></li>
+                        <li class="tools__li--logo tools_coding--li"><img src="./imagenes/logo_coding.svg" alt="Logo Coding"></li>
+                        <li class="tools__li--title tools_coding--li"><h4>Coding / Development</h4></li>
+                    </ul>
+
+                    <ul class="tools__logos">
+                        <li class="tools__logos--li"><img src="./imagenes/html_logo.svg" alt="Logo HTML5"></li>
+                        <li class="tools__logos--li"><img src="./imagenes/css_logo.svg" alt="Logo CSS3"></li>
+                        <li class="tools__logos--li"><img src="./imagenes/bootstrap_logo.svg" alt="Logo Bootstrap"></li>
+                        <li class="tools__logos--li"><img src="./imagenes/sass_logo.svg" alt="Logo Sass"></li>
+                    </ul>
+
+                    <!--Version Control System-->
+
+                    <ul class="tools__ul--left">
+                        <li class="tools__li--title tools_vcs--li"><h4>Version Control System</h4></li>
+                        <li class="tools__li--logo tools_vcs--li"><img src="./imagenes/logo_vcs.svg" alt="Logo VCS"></li>
+                        <li class="tools__li--div tools_diseño--li"><div></div></li>
+                    </ul>
+
+                    <ul class="tools__logos tools__two--ul">
+                        <li class="tools__logos--li-two"><img src="./imagenes/github_logo.svg" alt="Logo Github"></li>
+                        <li class="tools__logos--li-two"><img src="./imagenes/git_logo.svg" alt="Logo Git"></li>
+                    </ul>
+
+                    <!--Modelado 3D/Texturing-->
+
+                    <ul class="tools__ul--right tools__3D--ul">
+                        <li class="tools__li--div tools_diseño--li"><div></div></li>
+                        <li class="tools__li--logo tools_3D--li"><img src="./imagenes/logo_3d.svg" alt="Logo 3D"></li>
+                        <li class="tools__li--title tools_3D--li"><h4>Modelado 3D / Texturing</h4></li>
+                    </ul>
+
+                    <ul class="tools__logos">
+                        <li class="tools__logos--li"><img src="./imagenes/zbrush_logo.svg" alt="Logo Zbrush"></li>
+                        <li class="tools__logos--li"><img src="./imagenes/blender_logo.svg" alt="Logo Blender"></li>
+                        <li class="tools__logos--li"><img src="./imagenes/keyshot_logo.gif" alt="Logo Keyshot"></li>
+                        <li class="tools__logos--li"><img src="./imagenes/substance_logo.svg" alt="Logo Adobe Painter"></li>
+                    </ul>
+
+                    <!--Proximamente-->
+
+                    <ul class="tools__ul--left tools__prox--ul">
+                        <li class="tools__li--title tools_prox--li"><h4>Proximamente...</h4></li>
+                        <li class="tools__li--logo tools_prox--li"><img src="./imagenes/logo_hourglass.svg" alt="Logo prox"></li>
+                        <li class="tools__li--div tools_diseño--li"><div></div></li>
+                    </ul>
+
+                    <ul class="tools__logos tools__two--ul">
+                        <li class="tools__logos--li-two"><img src="./imagenes/js_logo.svg" alt="Logo JavaScript"></li>
+                        <li class="tools__logos--li-two"><img src="./imagenes/react_logo.svg" alt="Logo React"></li>
+                    </ul>
+
+                </div>
+                
+            </section>
+
+            <!--Main-Mas sobre mi-->
+
+            <section class="home__sobreMi">
+
+                <h3 class="home__sobreMi--title">Mas sobre mí</h3>
+
+                <p class="home__sobreMi--p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos qui autem fugit laborum sequi cum optio tempora numquam repudiandae, iusto accusamus magnam officia dolores deleniti at voluptatem quibusdam similique quis natus maxime? Error, quisquam iure fugiat facilis explicabo maxime laboriosam?</p>
+
+                <div class="sobreMi__buttons">
+
+                    <button class="sobreMi__btn">
+                        <a class="sobreMi__btn--a" href="">Acerca de Mi</a>
+                    </button>
     
-</body>
+                    <button class="sobreMi__btn">
+                        <a class="sobreMi__btn--a" href="">Contacto</a>
+                    </button>
+
+                </div>
+
+            </section>
+
+        </main>
+
+        <!--FOOTER-->
+
+        <footer class="footer" id="footer-home">
+
+            <h6 class="footer__title">¡Gracias por la visita!</h6>
+
+            <a href="" class="footer__logo"><img src="./imagenes/logo_main.svg" alt="" class="footer__logo--img"></a>
+
+            <div class="footer__bottom">
+
+                <ul class="footer__bottom--ul">
+                    <li class="footer__bottom--li">
+                        <a href="" class="footer__bottom--a">
+                            <img src="./imagenes/footer_telegram_logo.svg" alt="" class="footer__bottom--img"
+                        ></a>
+                    </li>
+                    <li class="footer__bottom--li">
+                        <a href="" class="footer__bottom--a">
+                            <img src="./imagenes/footer_github_logo.svg" alt="" class="footer__bottom--img"
+                        ></a>
+                    </li>
+                    <li class="footer__bottom--li">
+                        <a href="" class="footer__bottom--a">
+                            <img src="./imagenes/footer_outlook_logo.svg" alt="" class="footer__bottom--img"
+                        ></a>
+                    </li>
+                    <li class="footer__bottom--li">
+                        <a href="" class="footer__bottom--a">
+                            <img src="./imagenes/footer_linkedin_logo.svg" alt="" class="footer__bottom--img"
+                        ></a>
+                    </li>
+                </ul>
+
+                <p class="footer__bottom--p">Tel: +54 9 11 6503 3642</p>
+                <p class="footer__bottom--p">Email: manucostales.art@hotmail.com</p>
+                
+            </div>
+
+        </footer>
+
+
+
+
+
+
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <!--
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+        -->
+    </body>
 </html>

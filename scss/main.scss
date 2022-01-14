@@ -1,3 +1,23 @@
-* {
-    color: white;
-}
+@import "../scss/sass-utils/functions.scss";
+@import "../scss/sass-utils/mixins.scss";
+@import "../scss/sass-utils/animations.scss";
+
+
+@import "../scss/base/reset.scss";
+@import "../scss/base/commons";
+@import "../scss/base/typo";
+
+
+@import "../scss/layout/grid";
+@import "../scss/layout/nav";
+@import "../scss/layout/header";
+@import "../scss/layout/footer";
+
+
+@import "../scss/components/buttons.scss";
+
+
+@import "../scss/pages/home";
+@import "../scss/pages/acerca_de_mi";
+@import "../scss/pages/contacto";
+@import "../scss/pages/error_404";

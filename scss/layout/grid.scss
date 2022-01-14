@@ -1,0 +1,36 @@
+
+html, body {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: minmax(5vh, max-content) minmax(10vh, max-content) minmax(10vh, max-content) minmax(10vh, max-content);
+    grid-template-areas: "nav nav nav"
+    "header header header"
+    "main main main"
+    "footer footer footer";
+    overflow: hidden;
+}
+
+nav {
+    grid-area: nav;
+    height: 10vh;
+}
+
+header {
+    grid-area: header;
+    height: 100vh;
+}
+
+main {
+    grid-area: main;
+    min-height: 50vh;
+}
+
+footer {
+    grid-area: footer;
+    min-height: 50vh;
+}

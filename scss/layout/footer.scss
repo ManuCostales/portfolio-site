@@ -1,0 +1,177 @@
+
+
+.footer {
+    @include flexbox (flex, column nowrap, center, center);
+
+    .footer__title {
+        @include s-w (2rem, 200);
+        text-align: center;
+        margin: $center;
+        color: $color;
+    }
+
+    .footer__logo {
+        margin-top: 10vh;
+        .footer__logo--img {
+            width: 100px;
+        }
+    }
+
+    .footer__bottom {
+        height: 50vh;
+        @include bg (url(../imagenes/footer.png), no-repeat, cover, auto, auto);
+        width: 100%;
+        .footer__bottom--ul {
+            margin: 30vh 0;
+            margin-bottom: 5vh;
+            padding: 0;
+            @include flexbox (flex, row nowrap, space-evenly, center);
+            .footer__bottom--li {
+                .footer__bottom--a {
+                    .footer__bottom--img {
+                        width: 50px;
+                    }
+                }
+            }
+        }
+
+        .footer__bottom--p {
+            text-align: center;
+            margin: 0;
+            @include s-w (0.6rem, 400);
+            color: $color-w;
+        }
+    }
+
+    
+}
+
+// IPAD LG BREAKDOWN
+
+@media only screen and (min-width: 768px) {
+    .footer {
+        .footer__title {
+            @include s-w (3.5rem, 200);
+            margin-top: 10vh;
+        }
+        .footer__bottom {
+            height: 50vh;
+            .footer__bottom--ul {
+                margin: 28vh 0;
+                margin-bottom: 8vh;
+                .footer__bottom--li {
+                    .footer__bottom--a {
+                        .footer__bottom--img {
+                            width: 60px;
+                        }
+                    }
+                }
+            }
+            .footer__bottom--p {
+                font-size: 0.8rem;
+            }
+        }
+    }
+}
+
+// IPAD PRO LG+ BREAKDOWN
+
+@media only screen and (min-width: 1024px) {
+    .footer {
+        .footer__title {
+            @include s-w (4rem, 200);
+        }
+    
+        .footer__logo {
+            margin-top: 5vh;
+            .footer__logo--img {
+                width: 200px;
+            }
+        }
+
+        .footer__bottom {
+            height: 50vh;
+            .footer__bottom--ul {
+                margin: 25vh 0;
+                margin-bottom: 8vh;
+                .footer__bottom--li {
+                    .footer__bottom--a {
+                        .footer__bottom--img {
+                            width: 100px;
+                        }
+                    }
+                }
+            }
+            .footer__bottom--p {
+                @include s-w (1.2rem, 400);
+                
+            }
+        }
+    }
+}
+
+// NOTEBOOK XL BREAKDOWN
+
+@media only screen and (min-width: 1200px) {
+    .footer {
+        .footer__title {
+            @include s-w (3rem, 200);
+            margin-bottom: 5vh;
+        }
+    
+        .footer__logo {
+            .footer__logo--img {
+                width: 125px;
+            }
+        }
+
+        .footer__bottom {
+            .footer__bottom--ul {
+                margin: 25vh 0;
+                margin-bottom: 5vh;
+                .footer__bottom--li {
+                    .footer__bottom--a {
+                        .footer__bottom--img {
+                            width: 90px;
+                        }
+                    }
+                }
+            }
+            .footer__bottom--p {
+                font-weight: 300;
+            }
+        }
+    }
+}
+
+// DESKTOP XL BREAKDOWN
+
+@media only screen and (min-width: 1360px) {
+    .footer {
+        .footer__title {
+            @include s-w (3rem, 200);
+            margin-bottom: 5vh;
+        }
+    
+        .footer__logo {
+            .footer__logo--img {
+                width: 125px;
+            }
+        }
+
+        .footer__bottom {
+            height: 70vh;
+            .footer__bottom--ul {
+                margin: 40vh 0;
+                margin-bottom: 10vh;
+                .footer__bottom--li {
+                    .footer__bottom--a {
+                        .footer__bottom--img {
+                            width: 90px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
